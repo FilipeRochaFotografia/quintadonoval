@@ -15,9 +15,9 @@ export function FloatingHeader() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-background/60 backdrop-blur-xl border-b border-light/5"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 pb-8 pt-4 bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/80 to-transparent pointer-events-none"
     >
-      <div className="flex-1">
+      <div className="flex-1 pointer-events-auto">
         {!isHome && (
           <button
             onClick={() => router.back()}

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, ChevronLeft, Wine, UtensilsCrossed } from 'lucide-react';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/Animations';
 
 export function generateStaticParams() {
   return dinnerSequence.map((moment) => ({
@@ -27,12 +28,16 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
     <main className="min-h-screen flex flex-col relative bg-background pb-24 selection:bg-primary selection:text-light">
       <FloatingHeader />
       
-      {/* Glow */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,_var(--color-primary)_0%,_transparent_50%)] opacity-10 pointer-events-none" />
+      {/* Premium ambient glow */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <FadeIn delay={0.3}>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-deep-wine)] opacity-[0.05] rounded-full blur-[120px]" />
+        </FadeIn>
+      </div>
 
       <div className="relative z-10 pt-28 px-6 max-w-lg mx-auto w-full">
         {/* Moment Header */}
-        <div className="text-center mb-12">
+        <FadeIn delay={0.1} className="text-center mb-12">
           <p className="font-serif text-[10px] text-accent/80 font-semibold uppercase tracking-[0.4em] mb-4">
             Momento {moment.momentOrder} de 6
           </p>
@@ -41,12 +46,12 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
             <div className="w-2 h-2 rounded-full bg-primary/50" />
             <div className="h-px flex-1 bg-light/10" />
           </div>
-        </div>
+        </FadeIn>
 
         {/* Pairing Visuals */}
-        <div className="flex flex-col gap-8 mb-16">
+        <StaggerContainer delay={0.2} className="flex flex-col gap-8 mb-16">
           {/* Wine */}
-          <div className="flex flex-col items-center">
+          <StaggerItem className="flex flex-col items-center">
             <div className="relative w-48 h-64 mb-6 drop-shadow-lg">
               <Image 
                 src={moment.wine.image} 
@@ -62,14 +67,14 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
               <Wine size={14} />
               <span>{moment.wine.region} · {moment.wine.type}</span>
             </div>
-          </div>
+          </StaggerItem>
 
-          <div className="flex justify-center">
+          <StaggerItem className="flex justify-center">
             <div className="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent" />
-          </div>
+          </StaggerItem>
 
           {/* Dish */}
-          <div className="flex flex-col items-center">
+          <StaggerItem className="flex flex-col items-center">
             <div className="relative w-64 h-48 mb-6 drop-shadow-xl rounded-2xl overflow-hidden bg-light/5 border border-light/10 flex items-center justify-center">
               <Image 
                 src={moment.dish.image} 
@@ -85,22 +90,23 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
               <UtensilsCrossed size={14} />
               <span>{moment.dish.type}</span>
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
 
         {/* Editorial Text */}
-        <div className="bg-[#141414]/80 border border-light/5 rounded-3xl p-8 mb-16 relative shadow-2xl">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background px-4">
-            <span className="font-serif text-[10px] uppercase tracking-[0.3em] text-light/40">A Harmonização</span>
+        <FadeIn delay={0.6} className="bg-light/5 backdrop-blur-md border border-light/10 rounded-3xl p-8 mb-16 relative shadow-2xl">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background/60 backdrop-blur-sm px-4 rounded-full border border-light/10">
+            <span className="font-serif text-[10px] uppercase tracking-[0.3em] text-light/70">A Harmonização</span>
           </div>
           <p className="text-lg text-light/90 leading-relaxed text-center italic">
             "{moment.editorialPairing}"
           </p>
-        </div>
+        </FadeIn>
 
         {/* Profiles Details */}
-        <div className="space-y-12 mb-16 px-2">
-          <section>
+        <StaggerContainer delay={0.7} className="space-y-12 mb-16 px-2">
+          <StaggerItem>
+            <section>
             <h4 className="text-xl border-b border-light/10 pb-4 mb-4 text-light/80">O Vinho em Detalhe</h4>
             <div className="space-y-4 font-light text-sm text-light/60">
               <p className="leading-relaxed">{moment.wine.longDescription}</p>
@@ -123,18 +129,21 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
                 </div>
               </div>
             </div>
-          </section>
+            </section>
+          </StaggerItem>
 
-          <section>
-            <h4 className="text-xl border-b border-light/10 pb-4 mb-4 text-light/80">O Prato em Detalhe</h4>
+          <StaggerItem>
+            <section>
+              <h4 className="text-xl border-b border-light/10 pb-4 mb-4 text-light/80">O Prato em Detalhe</h4>
             <div className="space-y-4 font-light text-sm text-light/60">
               <p className="leading-relaxed">{moment.dish.longDescription}</p>
             </div>
-          </section>
-        </div>
+            </section>
+          </StaggerItem>
+        </StaggerContainer>
 
         {/* Navigation */}
-        <div className="flex items-center justify-between border-t border-light/10 pt-8 mt-12 pb-8">
+        <FadeIn delay={0.9} className="flex items-center justify-between border-t border-light/10 pt-8 mt-12 pb-8">
           {prevMoment ? (
             <Link href={`/moment/${prevMoment.id}`} className="flex items-center gap-3 text-light/50 hover:text-light transition-colors group">
               <ChevronLeft size={20} strokeWidth={1.5} className="group-hover:-translate-x-1 transition-transform" />
@@ -162,7 +171,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
               </Link>
             </div>
           )}
-        </div>
+        </FadeIn>
       </div>
     </main>
   );
