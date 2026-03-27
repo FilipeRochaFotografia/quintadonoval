@@ -31,7 +31,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
       {/* Premium ambient glow */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <FadeIn delay={0.3}>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-deep-wine)] opacity-[0.05] rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-deep-wine)] opacity-15 rounded-full blur-[120px]" />
         </FadeIn>
       </div>
 
@@ -166,7 +166,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
             </Link>
           ) : (
             <div className="text-right">
-              <Link href="/menu" className="inline-block border border-primary/50 text-primary px-6 py-2 rounded-full text-xs tracking-widest uppercase hover:bg-primary/10 transition-colors">
+              <Link href="/agradecimento" className="inline-block border border-primary/50 text-primary px-6 py-2 rounded-full text-xs tracking-widest uppercase hover:bg-primary/10 transition-colors">
                 Finalizar
               </Link>
             </div>
