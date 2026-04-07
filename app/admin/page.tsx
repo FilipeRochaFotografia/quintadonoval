@@ -15,7 +15,7 @@ export default function AdminPage() {
   if (!session) {
     return (
       <div className="flex items-center justify-center min-h-screen p-6">
-        <div className="w-full max-w-md p-8 rounded-3xl bg-[#141414] border border-light/5">
+        <div className="w-full max-w-md p-8 rounded-3xl bg-[#232532] border border-light/5">
           <h1 className="font-serif text-3xl text-center mb-8">Admin Login</h1>
           <form onSubmit={(e) => { e.preventDefault(); setSession({ user: { email: 'admin@salavinica.pt' } }); }} className="space-y-4">
             <div>
@@ -60,13 +60,13 @@ export default function AdminPage() {
       <div className="flex gap-2 mb-8">
         <button 
           onClick={() => setActiveTab('wines')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm transition-colors ${activeTab === 'wines' ? 'bg-light text-background font-medium' : 'bg-[#141414] text-light/70 border border-light/5 hover:bg-[#1A1A1A]'}`}
+          className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm transition-colors ${activeTab === 'wines' ? 'bg-light text-background font-medium' : 'bg-[#232532] text-light/70 border border-light/5 hover:bg-[#2A2C3D]'}`}
         >
           <Wine size={16} /> Vinhos
         </button>
         <button 
           onClick={() => setActiveTab('dishes')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm transition-colors ${activeTab === 'dishes' ? 'bg-light text-background font-medium' : 'bg-[#141414] text-light/70 border border-light/5 hover:bg-[#1A1A1A]'}`}
+          className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm transition-colors ${activeTab === 'dishes' ? 'bg-light text-background font-medium' : 'bg-[#232532] text-light/70 border border-light/5 hover:bg-[#2A2C3D]'}`}
         >
           <Utensils size={16} /> Pratos
         </button>
@@ -87,7 +87,7 @@ function AdminWines() {
         </button>
       </div>
 
-      <div className="bg-[#141414] rounded-2xl border border-light/5 overflow-hidden">
+      <div className="bg-[#232532] rounded-2xl border border-light/5 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm whitespace-nowrap">
             <thead className="bg-light/5 text-light/50 text-xs uppercase tracking-wider">
@@ -101,7 +101,7 @@ function AdminWines() {
             </thead>
             <tbody className="divide-y divide-light/5">
               {staticWines.map(wine => (
-                <tr key={wine.id} className="hover:bg-[#1A1A1A] transition-colors">
+                <tr key={wine.id} className="hover:bg-[#2A2C3D] transition-colors">
                   <td className="px-6 py-4 font-medium text-light">{wine.name}</td>
                   <td className="px-6 py-4 text-light/70">{wine.category}</td>
                   <td className="px-6 py-4 text-light/70">{wine.region}</td>
@@ -129,7 +129,7 @@ function AdminDishes() {
         </button>
       </div>
 
-      <div className="bg-[#141414] rounded-2xl border border-light/5 overflow-hidden">
+      <div className="bg-[#232532] rounded-2xl border border-light/5 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm whitespace-nowrap">
             <thead className="bg-light/5 text-light/50 text-xs uppercase tracking-wider">
@@ -141,7 +141,7 @@ function AdminDishes() {
             </thead>
             <tbody className="divide-y divide-light/5">
               {staticDishes.map(dish => (
-                <tr key={dish.id} className="hover:bg-[#1A1A1A] transition-colors">
+                <tr key={dish.id} className="hover:bg-[#2A2C3D] transition-colors">
                   <td className="px-6 py-4 font-medium text-light">{dish.name}</td>
                   <td className="px-6 py-4 text-light/70">{dish.category}</td>
                   <td className="px-6 py-4 text-right">

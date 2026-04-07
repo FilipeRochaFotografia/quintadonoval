@@ -14,21 +14,21 @@ export default function Agradecimento() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-deep-wine)] opacity-15 rounded-full blur-[120px]" />
         </FadeIn>
       </div>
-      
+
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-32 pb-12">
         <StaggerContainer delay={0.1} className="text-center space-y-8 max-w-lg mx-auto mb-16">
           <StaggerItem className="space-y-4 flex flex-col items-center">
             <div className="relative w-16 h-10 mb-2 opacity-80">
-              <Image 
-                src="/logo/logoprincipal.png" 
-                alt="Sala Vínica" 
+              <Image
+                src="/logo/logoprincipal.png"
+                alt="Sala Vínica"
                 fill
                 className="object-contain"
               />
             </div>
             <h1 className="font-serif text-3xl text-light tracking-[0.1em] uppercase mb-4 mt-8">Obrigado</h1>
           </StaggerItem>
-          
+
           <StaggerItem className="h-px w-16 bg-light/10 mx-auto" />
 
           <StaggerItem>
@@ -39,7 +39,7 @@ export default function Agradecimento() {
         </StaggerContainer>
 
         <FadeIn delay={0.6} className="w-full max-w-xs mx-auto text-center mt-8">
-          <Link 
+          <Link
             href="/"
             className="group relative w-full overflow-hidden rounded-full bg-light/5 border border-light/10 py-5 flex items-center justify-center transition-all hover:bg-light/10 hover:border-light/20 hover:-translate-y-1 active:scale-[0.98] shadow-2xl"
           >

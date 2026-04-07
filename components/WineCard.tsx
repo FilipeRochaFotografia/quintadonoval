@@ -6,7 +6,7 @@ export function WineCard({ wine }: { wine: Wine }) {
   return (
     <Link 
       href={`/vinhos/${wine.id}`}
-      className="group flex flex-col p-5 rounded-2xl bg-[#141414] border border-light/5 hover:bg-[#1A1A1A] transition-all"
+      className="group flex flex-col p-5 rounded-2xl bg-[#232532] border border-light/5 hover:bg-[#2A2C3D] transition-all"
     >
       <div className="flex gap-5">
         {/* Placeholder / Image Area */}
