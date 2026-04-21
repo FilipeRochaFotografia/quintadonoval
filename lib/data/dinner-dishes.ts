@@ -1,4 +1,4 @@
-export type DishId = 'canape-petinga' | 'canape-atum' | 'salada-bacalhau' | 'peixe-galo' | 'arroz-costela' | 'pao-de-lo';
+export type DishId = 'aperitivos' | 'entradas' | 'massada-robalo' | 'pao-de-lo' | 'queijo-serra';
 
 export interface DinnerDish {
   id: DishId;
@@ -23,125 +23,105 @@ export interface DinnerDish {
 }
 
 export const dinnerDishes: Record<DishId, DinnerDish> = {
-  'canape-petinga': {
-    id: 'canape-petinga',
-    slug: 'canape-petinga',
-    name: 'Canapé de Filete de Petinga',
-    type: 'Entrada',
-    shortDescription: 'Clássico da cozinha portuguesa reinterpretado com leveza e elegância.',
-    longDescription: 'Um clássico da cozinha portuguesa reinterpretado em formato leve e elegante. A petinga, pequena e intensa, traz um perfil salino e ligeiramente oleoso, com textura crocante no exterior e suculenta no interior.',
-    ingredients: ['petinga fresca', 'fritura leve', 'base de pão / suporte crocante', 'possível elemento ácido (limão ou pickles)'],
+  'aperitivos': {
+    id: 'aperitivos',
+    slug: 'aperitivos',
+    name: 'Canapé de Tártaro de Atum c/ ovas e Canapé de Camarão',
+    type: 'Aperitivos',
+    shortDescription: 'Início elegante com delicadeza e notas marítimas.',
+    longDescription: 'Momentos de sofisticação com atum fresco coroado com ovas e o sabor nobre do camarão. Uma harmonia desenhada para preparar o palato para o longo percurso, onde a leveza e as texturas macias são dominantes.',
+    ingredients: ['atum fresco', 'ovas', 'camarão', 'massa crocante'],
     sensoryProfile: {
       salinity: 'média-alta',
-      fat: 'média',
+      fat: 'baixa',
       intensity: 'média',
-      texture: 'crocante + suculenta',
-      finish: 'persistente e marítimo'
+      texture: 'macia e suave',
+      finish: 'fresco e limpo'
     },
-    gastronomicReading: 'Prato de abertura com forte identidade atlântica. A fritura traz conforto e intensidade, enquanto o formato reduzido mantém leveza.',
-    pairingLogic: ['precisa de frescura', 'precisa de acidez', 'beneficia de mineralidade', 'não suporta peso excessivo'],
-    image: '/pratos/prato1.png',
+    gastronomicReading: 'Abertura perfeita, com toques marítimos e crocância que pedem grande frescura e mineralidade no copo.',
+    pairingLogic: ['limpeza de palato', 'acidez vibrante', 'frescura atlântica'],
+    image: '/pratos/1canapes.png',
     dinnerOrder: 1
   },
-  'canape-atum': {
-    id: 'canape-atum',
-    slug: 'canape-atum',
-    name: 'Canapé de Tártaro de Atum',
-    type: 'Entrada',
-    shortDescription: 'Momento de sofisticação com atum cru, focado na pureza do produto.',
-    longDescription: 'Preparação delicada baseada em atum cru de alta qualidade, cortado à faca, preservando textura e frescura. Apresenta-se num formato limpo, preciso e focado na pureza do produto.',
-    ingredients: ['atum fresco (qualidade sashimi)', 'azeite', 'sal', 'possível elemento ácido (limão / lima)', 'ervas frescas'],
-    sensoryProfile: {
-      salinity: 'média',
-      fat: 'média-baixa',
-      intensity: 'média',
-      texture: 'macia, delicada',
-      finish: 'limpo e fresco'
-    },
-    gastronomicReading: 'Prato de grande precisão, onde o foco está na textura e na pureza do peixe. Requer acompanhamento que respeite essa delicadeza.',
-    pairingLogic: ['precisa de acidez', 'precisa de limpeza', 'não tolera excesso de madeira', 'valoriza elegância'],
-    image: '/pratos/prato2.png',
-    dinnerOrder: 2
-  },
-  'salada-bacalhau': {
-    id: 'salada-bacalhau',
-    slug: 'salada-bacalhau',
-    name: 'Salada de Bacalhau e Grão de Bico',
-    type: 'Entrada / prato intermédio',
-    shortDescription: 'Início da progressão gastronómica. Combina intensidade com textura.',
-    longDescription: 'Um prato profundamente português que combina a intensidade do bacalhau com a textura e o corpo do grão-de-bico. Pode incluir cebola, azeite e ervas, criando um equilíbrio entre rusticidade e frescura.',
-    ingredients: ['bacalhau', 'grão-de-bico', 'azeite', 'cebola', 'ervas aromáticas'],
+  'entradas': {
+    id: 'entradas',
+    slug: 'entradas',
+    name: 'Salada de Polvo, Croquetes de Alheira e Sapateira Recheada',
+    type: 'Entradas',
+    shortDescription: 'Trilogia tradicional rica em texturas e fortes identidades costeiras.',
+    longDescription: 'Um prato que funde as notas fumadas e intensas da alheira com a frescura cítrica da salada de polvo e a untuosidade rica da sapateira. Três autênticos ícones reinam numa harmonia perfeita de texturas.',
+    ingredients: ['polvo', 'alheira', 'sapateira', 'temperos tradicionais'],
     sensoryProfile: {
       salinity: 'média-alta',
-      fat: 'média',
-      intensity: 'média-alta',
-      texture: 'densa, estruturada',
-      finish: 'longo e reconfortante'
-    },
-    gastronomicReading: 'Prato de transição, já com maior densidade e presença. Introduz estrutura no jantar.',
-    pairingLogic: ['precisa de vinho com volume', 'precisa de frescura para equilibrar o sal', 'beneficia de textura e persistência'],
-    image: '/pratos/prato3.png',
-    dinnerOrder: 3
-  },
-  'peixe-galo': {
-    id: 'peixe-galo',
-    slug: 'peixe-galo',
-    name: 'Peixe Galo Frito com Açorda de Ovas',
-    type: 'Prato principal (mar)',
-    shortDescription: 'Ponto alto do mar de grande intensidade e identidade tradicional.',
-    longDescription: 'Prato com forte identidade tradicional. O peixe galo frito apresenta textura crocante e sabor delicado, enquanto a açorda de ovas traz profundidade, untuosidade e intensidade marítima.',
-    ingredients: ['peixe galo', 'fritura', 'açorda de ovas', 'pão', 'alho', 'coentros', 'azeite'],
-    sensoryProfile: {
-      salinity: 'alta',
       fat: 'média-alta',
       intensity: 'alta',
-      texture: 'crocante + cremosa',
-      finish: 'muito persistente'
+      texture: 'complexa e rústica',
+      finish: 'longo e reconfortante'
     },
-    gastronomicReading: 'Prato de grande intensidade e identidade. A açorda adiciona profundidade e textura, criando um conjunto complexo e marcante.',
-    pairingLogic: ['suporta estrutura', 'suporta intensidade', 'permite abordagens menos óbvias (incluindo tinto leve a médio)'],
-    image: '/pratos/prato4.png',
-    dinnerOrder: 4
+    gastronomicReading: 'A complexidade destas três identidades distintas pede um vinho branco encorpado, sério e com volume para segurar os sabores rústicos.',
+    pairingLogic: ['vinho com textura aromática', 'frescura em contraste', 'acidez para equilibrar a untuosidade'],
+    image: '/pratos/2entradas.png',
+    dinnerOrder: 2
   },
-  'arroz-costela': {
-    id: 'arroz-costela',
-    slug: 'arroz-costela',
-    name: 'Arroz de Costela Mendinha e Grelos',
-    type: 'Prato principal (carne)',
-    shortDescription: 'Clímax do jantar. Prato de conforto profundo e envolvente.',
-    longDescription: 'Um prato de conforto com grande profundidade. A costela mendinha, rica e suculenta, confere intensidade ao arroz, enquanto os grelos introduzem amargor e frescura, equilibrando o conjunto.',
-    ingredients: ['costela de carne', 'arroz', 'caldo rico', 'grelos', 'gordura natural da carne'],
+  'massada-robalo': {
+    id: 'massada-robalo',
+    slug: 'massada-robalo',
+    name: 'Massada de Robalo com Gambas',
+    type: 'Prato Principal',
+    shortDescription: 'Conforto autêntico com matriz piscatória duriense e atlântica.',
+    longDescription: 'A alma da costa nacional trazida à mesa num prato denso e caldoso. Um prato generoso em sabor onde a suculência do robalo e a intensidade da gamba se envolvem a preceito nas massas enriquecidas pelo mar.',
+    ingredients: ['robalo fresco', 'gambas', 'massa', 'caldo rico de marisco e peixe', 'coentros'],
     sensoryProfile: {
-      salinity: 'média',
-      fat: 'alta',
+      salinity: 'alta',
+      fat: 'média',
       intensity: 'alta',
-      texture: 'cremosa e envolvente',
-      finish: 'longo e profundo'
+      texture: 'caldosa e envolvente',
+      finish: 'persistente marítimo'
     },
-    gastronomicReading: 'Momento de maior peso e intensidade do jantar. Exige vinho com estrutura, persistência e capacidade de acompanhar gordura.',
-    pairingLogic: ['exige grande estrutura', 'precisa de profundidade', 'recompensa complexidade aromática'],
-    image: '/pratos/prato5.png',
-    dinnerOrder: 5
+    gastronomicReading: 'Um prato de panela, rico em substância, que pela sua versatilidade oceânica serve perfeitamente de tela tanto para brancos estruturados como para tintos cheios e vibrantes sem taninos ásperos.',
+    pairingLogic: ['suporta grande estrutura branca e tinta', 'o caldo compensa o corpo dos vinhos', 'mineralidade marcante'],
+    image: '/pratos/3principal.png',
+    dinnerOrder: 3
   },
   'pao-de-lo': {
     id: 'pao-de-lo',
     slug: 'pao-de-lo',
-    name: 'Pão de Ló e Queijo da Serra',
-    type: 'Sobremesa / fecho',
-    shortDescription: 'Fecho memorável. O lado amanteigado do pão de ló encontra o sal do queijo.',
-    longDescription: 'Combinação clássica portuguesa que equilibra doce e salgado. O pão de ló traz leveza e doçura, enquanto o queijo da Serra adiciona gordura, sal e profundidade.',
-    ingredients: ['pão de ló', 'queijo da Serra'],
+    name: 'Pão de Ló de Ovar',
+    type: 'Sobremesa',
+    shortDescription: 'Clássico doce húmido e reconfortante.',
+    longDescription: 'Leve, fofo e ligeiramente húmido, a matriz tradicional deste doce conventual exalta os sentidos e harmoniza elegantemente o Porto maduro e os seus frutos secos evoluídos.',
+    ingredients: ['gemas', 'açúcar', 'farinha'],
     sensoryProfile: {
-      sweetness: 'média-alta',
-      salinity: 'média',
-      fat: 'média-alta',
-      intensity: 'média-alta',
-      texture: 'cremosa + fofa',
-      finish: 'envolvente'
+      sweetness: 'alta',
+      salinity: 'baixa',
+      fat: 'baixa-média',
+      intensity: 'média',
+      texture: 'húmida e suave',
+      finish: 'doce e leve'
     },
-    gastronomicReading: 'Fecho clássico e reconfortante, com forte identidade nacional. Trabalha muito bem com vinhos doces e estruturados.',
-    pairingLogic: ['açúcar e gordura pedem álcool e estrutura', 'beneficia de notas evolutivas', 'harmonização por contraste e afinidade'],
-    image: '/pratos/prato6.png',
-    dinnerOrder: 6
+    gastronomicReading: 'Doçura amaciada e envolvida pela presença do longo, denso e complexo Tawny de meia idade.',
+    pairingLogic: ['harmoniza por complementaridade de idade', 'não ataca os sabores oxidados', 'contrasta brilhantemente com a acidez viva de um Porto velho'],
+    image: '/pratos/4paodelo.png',
+    dinnerOrder: 4
+  },
+  'queijo-serra': {
+    id: 'queijo-serra',
+    slug: 'queijo-serra',
+    name: 'Queijo da Serra',
+    type: 'Queijo',
+    shortDescription: 'Momento glorioso final que une as gorduras e sal do queijo às texturas doces do Vintage.',
+    longDescription: 'Um fecho icónico que cruza o perfil gorduroso, cremoso e muito salino de um Queijo da Serra curado, desenhado para explodir harmoniosamente com as taças raras de Portos Vintage concentrados.',
+    ingredients: ['queijo da serra velho'],
+    sensoryProfile: {
+      salinity: 'alta',
+      fat: 'alta',
+      intensity: 'alta',
+      texture: 'cremosa / pastosa',
+      finish: 'intenso'
+    },
+    gastronomicReading: 'A química da perfeição na mesa ibérica: ácido extremo e sal profundo encontram as frutas doces expansivas do Porto em plena juventude temporal.',
+    pairingLogic: ['sal equilibra doce do Porto', 'gordura arredonda o tanino', 'contraste final perfeito'],
+    image: '/pratos/5queijo.png',
+    dinnerOrder: 5
   }
 };

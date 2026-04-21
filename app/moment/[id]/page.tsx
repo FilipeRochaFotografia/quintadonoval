@@ -28,18 +28,21 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
     <main className="min-h-screen flex flex-col relative bg-background pb-24 selection:bg-primary selection:text-light">
       <FloatingHeader />
       
-      {/* Premium ambient glow */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <FadeIn delay={0.3}>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-deep-wine)] opacity-15 rounded-full blur-[120px]" />
-        </FadeIn>
-      </div>
+      {/* Removed premium ambient glow */}
 
       <div className="relative z-10 pt-28 px-6 max-w-lg mx-auto w-full">
         {/* Moment Header */}
-        <FadeIn delay={0.1} className="text-center mb-12">
+        <FadeIn delay={0.1} className="text-center mb-8">
+          <div className="relative w-40 h-20 mx-auto mb-6 drop-shadow-sm mix-blend-multiply">
+            <Image
+              src="/logo/logoquinta.png"
+              alt="Quinta do Noval Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
           <p className="font-serif text-[10px] text-accent/80 font-semibold uppercase tracking-[0.4em] mb-4">
-            Momento {moment.momentOrder} de 6
+            Momento {moment.momentOrder} de 8
           </p>
           <div className="flex justify-center items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-light/10" />
@@ -69,9 +72,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
             </div>
           </StaggerItem>
 
-          <StaggerItem className="flex justify-center">
-            <div className="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent" />
-          </StaggerItem>
+
 
           {/* Dish */}
           <StaggerItem className="flex flex-col items-center">
@@ -98,7 +99,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background/60 backdrop-blur-sm px-4 rounded-full border border-primary/20">
             <span className="font-serif text-[10px] uppercase tracking-[0.3em] text-accent">A Harmonização</span>
           </div>
-          <p className="text-lg text-light/90 leading-relaxed text-center italic">
+          <p className="text-[17px] text-light/90 leading-relaxed text-center italic">
             "{moment.editorialPairing}"
           </p>
         </FadeIn>
@@ -108,23 +109,25 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
           <StaggerItem>
             <section>
             <h4 className="font-serif text-xl border-b border-light/10 pb-4 mb-4 text-accent">O Vinho em Detalhe</h4>
-            <div className="space-y-4 font-light text-sm text-light/60">
+            <div className="space-y-4 font-light text-sm text-light/70">
               <p className="leading-relaxed">{moment.wine.longDescription}</p>
-              <div className="grid grid-cols-2 gap-6 pt-4">
+              <p className="leading-relaxed italic">{moment.wine.editorialCopy}</p>
+              
+              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-light/5">
                 <div>
-                  <span className="block font-serif text-[11px] font-medium uppercase tracking-widest text-accent mb-2">Estrutura</span>
-                  <ul className="space-y-1.5">
-                    <li>Acidez: <span className="text-light/80">{moment.wine.sensoryProfile.acidity}</span></li>
-                    <li>Corpo: <span className="text-light/80">{moment.wine.sensoryProfile.body}</span></li>
-                    <li>Final: <span className="text-light/80">{moment.wine.sensoryProfile.finish}</span></li>
+                  <span className="block font-serif text-[10px] uppercase tracking-[0.2em] text-accent/80 mb-3">Análise</span>
+                  <ul className="space-y-1.5 text-xs">
+                    <li><span className="text-light/40">Acidez:</span> <span className="text-light/80">{moment.wine.sensoryProfile.acidity}</span></li>
+                    <li><span className="text-light/40">Corpo:</span> <span className="text-light/80">{moment.wine.sensoryProfile.body}</span></li>
+                    <li><span className="text-light/40">Final:</span> <span className="text-light/80">{moment.wine.sensoryProfile.finish}</span></li>
                   </ul>
                 </div>
                 <div>
-                  <span className="block font-serif text-[11px] font-medium uppercase tracking-widest text-accent mb-2">Serviço</span>
-                  <ul className="space-y-1.5">
-                    <li>Temp: <span className="text-light/80">{moment.wine.serviceTemperature}</span></li>
-                    <li>Copo: <span className="text-light/80">{moment.wine.recommendedGlass}</span></li>
-                    <li>Decantação: <span className="text-light/80">{moment.wine.decanting}</span></li>
+                  <span className="block font-serif text-[10px] uppercase tracking-[0.2em] text-accent/80 mb-3">Serviço</span>
+                  <ul className="space-y-1.5 text-xs">
+                    <li><span className="text-light/40">Álcool:</span> <span className="text-light/80">{moment.wine.alcohol} vol.</span></li>
+                    <li><span className="text-light/40">Temp:</span> <span className="text-light/80">{moment.wine.serviceTemperature}</span></li>
+                    <li><span className="text-light/40">Copo:</span> <span className="text-light/80">{moment.wine.recommendedGlass}</span></li>
                   </ul>
                 </div>
               </div>
