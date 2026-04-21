@@ -217,7 +217,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     decanting: 'Sim',
     recommendedGlass: 'Riedel Sommeliers Vintage Port',
     editorialCopy: 'Reconhecido pelo seu inegável balanço, este exemplar evidencia uma juventude aromática invulgar com potencial e fôlego de guarda formidável, recomendando-se envelhecimento otimizado muito além de 2045.',
-    image: '/vinhos/port-vintage-2003.webp',
+    image: '/vinhos/port-vintage-2003.png',
     dinnerOrder: 7
   },
   'nacional-vintage-2003': {
@@ -244,7 +244,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     decanting: 'Obrigatória, por longas horas',
     recommendedGlass: 'Gabriel-Glas Stand\'Art',
     editorialCopy: 'Reverenciado como uma expressão de perfeição intemporal e um verdadeiro testemunho do seu terroir inabalável, o Nacional oferece sumptuosidade ímpar aliada a décadas e gerações consecutivas de evolução.',
-    image: '/vinhos/nacional-vintage-2003.webp',
+    image: '/vinhos/nacional-vintage-2003.png',
     dinnerOrder: 8
   }
 };
