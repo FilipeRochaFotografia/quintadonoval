@@ -36,7 +36,7 @@ export default function Home() {
 
           <StaggerItem>
             <p className="text-light text-[16px] font-light leading-relaxed px-4 text-justify opacity-90 mx-auto max-w-[320px]">
-              Esperamos que cada momento deste jantar seja uma descoberta, onde tradição e excelência do Armazém do Peixe e da Quinta do Noval se encontram à mesa. Uma celebração que une autenticidade, elegância e criação, conduzindo-o por uma viagem onde cada prato encontra o seu vinho perfeito.
+              Esperamos que cada momento deste almoço seja uma descoberta, onde tradição e excelência do Armazém do Peixe e da Quinta do Noval se encontram à mesa. Uma celebração que une autenticidade, elegância e criação, conduzindo-o por uma viagem onde cada prato encontra o seu vinho perfeito.
             </p>
           </StaggerItem>
 
