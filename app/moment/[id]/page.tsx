@@ -99,7 +99,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background/60 backdrop-blur-sm px-4 rounded-full border border-primary/20">
             <span className="font-serif text-[10px] uppercase tracking-[0.3em] text-accent">A Harmonização</span>
           </div>
-          <p className="text-[17px] text-light/90 leading-relaxed text-center italic">
+          <p className="text-[17px] text-light/90 leading-relaxed text-justify italic">
             "{moment.editorialPairing}"
           </p>
         </FadeIn>
@@ -110,8 +110,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
             <section>
             <h4 className="font-serif text-xl border-b border-light/10 pb-4 mb-4 text-accent">O Vinho em Detalhe</h4>
             <div className="space-y-4 font-light text-sm text-light/70">
-              <p className="leading-relaxed">{moment.wine.longDescription}</p>
-              <p className="leading-relaxed italic">{moment.wine.editorialCopy}</p>
+              <p className="leading-relaxed text-justify">{moment.wine.longDescription}</p>
               
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-light/5">
                 <div>

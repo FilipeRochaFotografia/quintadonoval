@@ -25,7 +25,6 @@ export interface DinnerWine {
   alcohol: string;
   decanting: string;
   recommendedGlass: string;
-  editorialCopy: string;
   image: string;
   dinnerOrder: number;
 }
@@ -40,7 +39,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Branco',
     grapes: ['30% Gouveio', '25% Viosinho', '15% Arinto', '10% Rabigato', '10% Códega de larinho', '10% Fernão Pires'],
     shortDescription: 'Expressão autêntica do Douro, marcada por frescura vibrante e delicado toque de carvalho.',
-    longDescription: 'Produzido com uvas selecionadas nas vinhas mais altas e socalcos do Douro, numa vindima equilibrada em 2023. As diferentes castas são desengaçadas, ligeiramente esmagadas e fermentadas maioritariamente em cubas de aço inoxidável. Uma parcela de 20% do lote fermenta em barricas de carvalho francês para adicionar estrutura.',
+    longDescription: 'Produzido a partir de uvas selecionadas das vinhas mais altas e dos socalcos do Douro, este vinho resulta de uma vindima equilibrada em 2023. As diferentes castas são desengaçadas, ligeiramente esmagadas e fermentadas sobretudo em cubas de aço inoxidável, com cerca de 20% do lote a fermentar em barricas de carvalho francês, trazendo maior estrutura ao conjunto. A ausência de fermentação maloláctica preserva a sua frescura e vivacidade, num perfil onde as notas de pêssego e citrinos se prolongam com equilíbrio e precisão.',
     style: ['Fresco', 'Equilibrado', 'Cativante', 'Complexo'],
     tastingNotes: ['Citrinos frescos', 'Pêssego maduro', 'Toque de carvalho especiado', 'Apontamento de toranja'],
     sensoryProfile: {
@@ -54,7 +53,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '13',
     decanting: 'Não',
     recommendedGlass: 'Copo de vinho branco clássico',
-    editorialCopy: 'Sem fermentação maloláctica, este vinho preserva um caráter altamente vibrante, onde as notas de pêssego e citrinos encontram balanço perfeito num final prolongado.',
     image: '/vinhos/cedro-noval-branco-2023.png',
     dinnerOrder: 1
   },
@@ -67,7 +65,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Branco',
     grapes: ['Viosinho', 'Gouveio'],
     shortDescription: 'Fresco, sedoso e rico, refletindo em pleno as propriedades do terroir xistoso de altitude.',
-    longDescription: 'O Cedro Reserva surge a partir de uma rigorosa seleção de uvas provenientes de terroirs de altitude. Forjado num ano marcado pelo calor primaveril, este vinho é desengaçado e fermentado (35%) em barricas de carvalho francês sob frequente revolvimento das borras (bâtonnage) durante os seus 5 meses de estágio.',
+    longDescription: 'O Cedro Reserva resulta de uma seleção rigorosa de uvas provenientes de terroirs de altitude. Num ano marcado por uma primavera quente, o vinho foi desengaçado e parcialmente fermentado em barricas de carvalho francês (35%), com bâtonnage regular durante cinco meses de estágio. A ausência de fermentação maloláctica, conjugada com a pureza da Viosinho e o corpo da Gouveio, preserva a frescura e a definição do conjunto, revelando uma integração muito bem medida do carvalho e uma bela expressão mineral.',
     style: ['Sedoso', 'Mineral', 'Fresco', 'Estruturado'],
     tastingNotes: ['Citrinos', 'Pêssego maduro', 'Erva-dittrichia', 'Nuances florais e mineralidade'],
     sensoryProfile: {
@@ -81,7 +79,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '13,5',
     decanting: 'Não',
     recommendedGlass: 'Copo de vinho branco amplo',
-    editorialCopy: 'Ao não se realizar a fermentação maloláctica, e aliando a pureza da casta Viosinho ao corpo do Gouveio, alcança-se uma integração impecável do carvalho e uma notável mineralidade.',
     image: '/vinhos/cedro-reserva-branco-2023.png',
     dinnerOrder: 2
   },
@@ -94,7 +91,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Branco',
     grapes: ['65% Viosinho', '35% Gouveio das vinhas da Quinta do Noval'],
     shortDescription: 'Vinho estruturado pela finesse floral, reflexo autêntico dos melhores lotes brancos da nossa propriedade.',
-    longDescription: 'Elaborado a partir das castas de eleição da própria Quinta. Após maceração, todo o mosto fermenta e estagia integralmente em barricas de carvalho francês (55% novas). O vinho é envelhecido durante 6 meses, com intensa bâtonnage inicial para consolidar o perfil sem recorrer a fermentação maloláctica.',
+    longDescription: 'Elaborado a partir das castas mais nobres da própria Quinta, este vinho fermenta e estagia integralmente em barricas de carvalho francês, 55% novas, após maceração. O estágio decorre ao longo de seis meses, com bâtonnage mais intensa no início, sem fermentação maloláctica. O vinho revela um excelente equilíbrio entre a concentração de fruta madura e a frescura natural das encostas altas, deixando antever um potencial de guarda promissor.',
     style: ['Finesse autêntica', 'Opulento', 'Fresco', 'Longo'],
     tastingNotes: ['Flores campestres', 'Ervas aromáticas', 'Nuances de citrinos', 'Madeira envolvida no conjunto'],
     sensoryProfile: {
@@ -108,7 +105,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '13',
     decanting: 'Não',
     recommendedGlass: 'Copo de branco amplo / Borgonha',
-    editorialCopy: 'Um equilíbrio exímio entre a concentração frutada madura e a vivacidade intrínseca da encosta do Douro, assinalando excelente potencial de guarda.',
     image: '/vinhos/quinta-reserva-branco-2023.png',
     dinnerOrder: 3
   },
@@ -121,7 +117,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Tinto',
     grapes: ['60% Touriga Nacional', '40% Field Blend de vinhas da Quinta'],
     shortDescription: 'Concentração intensa e delicada alicerçada pela mestria da Touriga Nacional em consórcio com vinhas velhas.',
-    longDescription: 'Originado numa vindima desafiadora de ano quente e seco, este tinto exalta o potencial concentrado de produção dos lagares. Fermentou primeiramente em cubas de aço inoxidável durante 8 dias antes de finalizar a maloláctica em barricas de carvalho francês, onde consolidou estagiando ao longo de 12 meses (40% barrica nova).',
+    longDescription: 'Nascido de uma vindima exigente, num ano quente e seco, este tinto exprime bem a concentração e a profundidade que os lagares sabem revelar. Fermentou em cubas de aço inoxidável durante oito dias, concluindo depois a fermentação maloláctica em barricas de carvalho francês, onde estagiou durante doze meses, 40% novas. No estilo fiel da Quinta do Noval, é um vinho que seduz desde jovem pelo volume e pelo requinte, mas que revela igualmente a estrutura e a consistência necessárias para uma excelente evolução ao longo do tempo.',
     style: ['Seco', 'Intenso', 'Delicado', 'Exuberante'],
     tastingNotes: ['Fruta vermelha', 'Nuances florais da Touriga', 'Notas de sedosidade madura', 'Taninos marcantes'],
     sensoryProfile: {
@@ -135,7 +131,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '15',
     decanting: 'Recomendada',
     recommendedGlass: 'Copo Bordeaux de boca larga',
-    editorialCopy: 'O fiel estilo da Quinta do Noval: delicioso e acessível quando jovem devido ao volume e requinte, evidenciando igualmente enorme vocação e firmeza para evolução de longo prazo.',
     image: '/vinhos/quinta-reserva-tinto-2020.png',
     dinnerOrder: 4
   },
@@ -148,7 +143,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Tinto',
     grapes: ['Mistura de vinhas do terroir Passadouro'],
     shortDescription: 'Tinto de excepção da série Terroir, oriundo da margem esquerda do rio Pinhão.',
-    longDescription: 'A Terroir Series é uma oportunidade de descobrir terroirs específicos identificados como excepcionais. O Vinhas do Passadouro nasce num terroir singular situado estrategicamente na margem esquerda do rio Pinhão, onde as condições perfeitas conferem à uva uma concentração sublime e vitalidade sem precedentes.',
+    longDescription: 'A Terroir Series convida à descoberta de terroirs específicos, reconhecidos pelo seu carácter excecional. O Vinhas do Passadouro nasce num terroir singular, na margem esquerda do rio Pinhão, onde as condições naturais permitem obter uvas de grande concentração, frescura e equilíbrio.',
     style: ['Firme', 'Concentrado', 'Elegante', 'Complexo'],
     tastingNotes: ['Frutos maduros (amora, cereja preta, ameixa)', 'Pimenta preta', 'Cravinho', 'Canela'],
     sensoryProfile: {
@@ -162,7 +157,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '14,5',
     decanting: 'Sim',
     recommendedGlass: 'Copo tinto autêntico',
-    editorialCopy: 'Um vinho detentor de 19 pontos por Nuno Oliveira Garcia (2025). Embora preencha deliciosamente o palato desde jovem, a sua estrutura sólida garante que ganhará impressionante complexidade aromática e suavidade de taninos com adega a longo prazo.',
     image: '/vinhos/vinhas-passadouro-2021.png',
     dinnerOrder: 5
   },
@@ -175,7 +169,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Vinho do Porto',
     grapes: ['Touriga Nacional', 'Sousão', 'Tinta Roriz', 'Touriga Francesa', 'Múltiplas Castas'],
     shortDescription: 'Um assombro de contemplação gerado num laborioso e rigoroso estágio de meio século em cave.',
-    longDescription: 'Elaborado sob maceração de lagar e pisa a pé com a seleção multivarietal imaculada do Vale do Douro. Cinquenta vastos anos repousando passivamente em cascos ancestrais e experientes de carvalho (640 litros) conferiram a este vinho uma evaporação controlada e natural pureza, criando concentrações e propriedades gustativas sem paralelo.',
+    longDescription: 'Elaborado com maceração em lagar e pisa a pé, a partir de uma seleção de vinhas velhas multivaretais, este vinho envelheceu durante cinquenta anos em cascos antigos de carvalho de 600 litros. Este longo estágio, marcado por uma evolução lenta e natural, deu origem a uma concentração admirável, sem nunca perder pureza, frescura e definição. No copo, revela uma serenidade rara, grande complexidade e um notável sentido de harmonia. A doçura ampla e envolvente é sustentada por uma acidez firme e elegante, num conjunto de enorme sofisticação e equilíbrio.',
     style: ['Contemplativo', 'Aveludado', 'Evoluído', 'Concentrado'],
     tastingNotes: ['Fruto seco torrado', 'Amêndoa madura', 'Especiarias integradas suaves', 'Âmbar com matizes mogno'],
     sensoryProfile: {
@@ -189,7 +183,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '21,5',
     decanting: 'Não',
     recommendedGlass: 'Riedel Vinum Vinho do Porto',
-    editorialCopy: 'A complexa unificação do vinho após tanto tempo dota as taças de uma serenidade madura extraordinária, sendo o ponto incontestável e sofisticado que une doçura plena com uma acidez requintada inabalável.',
     image: '/vinhos/tawny-50-anos.png',
     dinnerOrder: 6
   },
@@ -202,7 +195,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Porto Vintage',
     grapes: ['Touriga Nacional', 'Touriga Franca', 'Tinta Roriz', 'Tinto Cão', 'Sousão'],
     shortDescription: 'Monumento imaculado. Gigante forjado entre condições excecionais enaltecendo total balanço estrutural.',
-    longDescription: 'Colhido num ano caracteristicamente quente mas de uvas em sublime maturação. As uvas sofreram clássica e ininterrupta pisa a pé por três horas completas originando uma correta extração, resultando num estagiamento de barricas (18 meses). Representa exímios tons de cor profundos sublinhados por uma riqueza volumosa singular.',
+    longDescription: 'Vindimado num ano marcadamente quente, mas com uvas de excelente maturação, este vinho foi vinificado com pisa a pé, garantindo uma extração precisa e intensa. O estágio de 18 meses em tonel conferiu-lhe profundidade, estrutura e uma profunda intensidade de cor. Distinto pelo seu equilíbrio, revela uma juventude aromática invulgar e uma excelente aptidão para envelhecer em garrafa. A sua estrutura, frescura e concentração, permitem antecipar uma evolução muito positiva, em linha com os grandes anos do século XX.',
     style: ['Potente', 'Elegante', 'Estruturado', 'Evoluível'],
     tastingNotes: ['Ameixa etérea e incenso', 'Lavanda intensa', 'Alcaçuz elegante', 'Baga madura perfumada e sumarenta'],
     sensoryProfile: {
@@ -216,7 +209,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '19,5',
     decanting: 'Sim',
     recommendedGlass: 'Riedel Sommeliers Vintage Port',
-    editorialCopy: 'Reconhecido pelo seu inegável balanço, este exemplar evidencia uma juventude aromática invulgar com potencial e fôlego de guarda formidável, recomendando-se envelhecimento otimizado muito além de 2045.',
     image: '/vinhos/port-vintage-2003.png',
     dinnerOrder: 7
   },
@@ -229,7 +221,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     type: 'Porto Vintage',
     grapes: ['Touriga Nacional', 'Touriga Franca', 'Tinta Roriz', 'Tinto Cão', 'Sousão'],
     shortDescription: 'Fenómeno restrito e puro nascido enigmático a partir das icónicas vinhas raras de raiz própria (pé-franco).',
-    longDescription: 'Nacional consubstancia a pura exaltação de um exíguo e milagroso terroir isento da predação filoxérica da História ibérica. Utilizando nobres videiras de raiz própria e pisa a pé rigorosa sem contaminações rústicas externas, cria volumes ínfimos, resultando numa afirmação de carácter perante tempos vitícolas exigentes.',
+    longDescription: 'O Nacional é a expressão maior de um terroir raro e singular, preservado da filoxera e assente em videiras de raiz própria. Produzido em quantidades ínfimas, com pisa a pé e uma exigência absoluta em todo o processo, distingue-se pela profundidade, pela pureza e por uma identidade sem equivalente. Considerado uma das mais altas expressões do vinho do Porto, alia uma concentração extraordinária a uma notável precisão e capacidade de envelhecimento. É um vinho de exceção, cuja grandeza se revela tanto na juventude como ao longo de décadas de evolução em garrafa.',
     style: ['Mágico', 'Misterioso', 'Puro', 'Jovem e intenso'],
     tastingNotes: ['Múltiplas camadas frutadas vivas', 'Excecional densidade floral fina', 'Frutos preenchidos inteiros maturados', 'Plenitude harmoniosa da fruta de terroir'],
     sensoryProfile: {
@@ -243,7 +235,6 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
     alcohol: '20',
     decanting: 'Obrigatória, por longas horas',
     recommendedGlass: 'Gabriel-Glas Stand\'Art',
-    editorialCopy: 'Reverenciado como uma expressão de perfeição intemporal e um verdadeiro testemunho do seu terroir inabalável, o Nacional oferece sumptuosidade ímpar aliada a décadas e gerações consecutivas de evolução.',
     image: '/vinhos/nacional-vintage-2003.png',
     dinnerOrder: 8
   }
